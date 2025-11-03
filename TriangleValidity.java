@@ -1,14 +1,12 @@
 import java.util.Scanner;
-public class TriangleType {
+public class TriangleValidity {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter three sides of a triangle: ");
         int a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt();
-        if (a == b && b == c)
-            System.out.println("Equilateral Triangle");
-        else if (a == b || b == c || a == c)
-            System.out.println("Isosceles Triangle");
+        if (a + b > c && a + c > b && b + c > a)
+            System.out.println("Triangle is valid");
         else
-            System.out.println("Scalene Triangle");
+            System.out.println("Triangle is not valid");
     }
 }
